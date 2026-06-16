@@ -12,7 +12,7 @@
         <header class="hero-banner">
             <div class="profile-frame">
                 <div class="circle-pic">
-                    <img src="" alt="My Profile Picture">
+                    <img src="GREY.jpeg" alt="My Profile Picture">
                 </div>
             </div>
         </header>
@@ -64,6 +64,48 @@
                 </div>
             </div>
         </main>
+        <section class="interactive-bottom-box">
+            <div class="gallary-half">
+                <h3>My Gallery</h3>
+
+                <div class="slideshow-container">
+                    <img id="current-slide" scr="GREY.jpeg" alt="Gallery Slide">
+
+                    <button class="slide-arrow prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="slide-arrow next-btn" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="vertical-divider"></div>
+
+            <div class="contact-half">
+                <h3>Reach Out and Connect</h3>
+
+                <form class="quick-contact-form" onsubmit="event.preventDefault(); alert('Message Sent!!!');">
+                    <div class="input-group">
+                        <label>FULL NAME</label>
+                        <input type="text" placrholder="Enter your name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>EMAIL ADDRESS</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>PHONE NUMBER</label>
+                        <input type="tel" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>YOUR MESSAGE</label>
+                        <textarea rows="4" placeholder="Write your message here..." reqired>\</textarea>
+                    </div>
+
+                    <button type="submit" class="send-btn">SEND</button>
+                </form>
+            </div>
+        </section>
     </div>
 </body>
 </html>
