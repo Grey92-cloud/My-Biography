@@ -69,7 +69,7 @@
                 <h3>My Gallery</h3>
 
                 <div class="slideshow-container">
-                    <img id="current-slide" scr="GREY.jpeg" alt="Gallery Slide">
+                    <img id="current-slide" src="GREY.jpeg" alt="Gallery Slide">
 
                     <button class="slide-arrow prev-btn" onclick="changeSlide(-1)">&#10094;</button>
                     <button class="slide-arrow next-btn" onclick="changeSlide(1)">&#10095;</button>
@@ -84,7 +84,7 @@
                 <form class="quick-contact-form" onsubmit="event.preventDefault(); alert('Message Sent!!!');">
                     <div class="input-group">
                         <label>FULL NAME</label>
-                        <input type="text" placrholder="Enter your name" required>
+                        <input type="text" placeholder="Enter your name" required>
                     </div>
 
                     <div class="input-group">
@@ -107,5 +107,23 @@
             </div>
         </section>
     </div>
+<script>
+    const myImages = ["Grey1.jpeg", "Grey2.jpeg", "Grey3.jpeg"];
+    let currentIndex = 0
+
+    function changeSlide(direction) {
+        currentIndex += direction;
+
+        if (currentIndex >= myImages.length) {
+            currentIndex = 0;
+        }
+
+        if (currentIndex < 0) {
+            currentIndex = myImages.length - 1;
+        }
+
+        document.getElementById("current-slide").src = myImages[currentIndex];
+    }
+</script>
 </body>
 </html>
